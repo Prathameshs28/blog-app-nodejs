@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <%- include('./partials/head')  %>
+    <title>Profile</title>
+</head>
+<body>
+    
+    <%- include('./partials/nav')  %>
+
+    <!-- <%= JSON.stringify(user) %>  -->
+
+    <div class="container-fluid mt-4 card bg-light" style="width: 25rem;">
+        <img src="<%= user.profileImgeUrl %>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Name: <%= user.name %></h5>
+          <p class="card-text">ID:<%= user._id %> </p>
+          <p class="card-text">Email:<%= user.email %> </p>
+          <p class="card-text">Role:<%= user.role %> </p>
+        </div>
+      </div>
+
+
+    <%- include('./partials/scripts')  %>
+
+</body>
+</html>
